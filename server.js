@@ -20,6 +20,7 @@ connectdb();
 //import routes
 
 const user_route = require('./routes/user_route');
+const admin_route = require('./routes/admin_route');
 
 const app = express();
 app.use(morgan('dev'));
@@ -31,6 +32,7 @@ app.use('/', express.static(path.join(__dirname, 'files')))
 
 
 app.use(user_route);
+app.use(admin_route);
 
 const PORT = process.env.PORT || 5000
 app.listen(PORT, ()=>{

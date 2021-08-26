@@ -4,16 +4,16 @@ const express = require('express');
 const Admin = mongoose.model('Admin',{
     email: {
         type:String,
-        required: true,
+        // required: true,
         unique: true
     },
     password: {
-        type:String,
-        require: true
+        type:String
+        // require: true
     },
-    comfirmpassword: {
-        type:String,
-        require:true
+    confirmpassword: {
+        type:String
+        // require:true
     }
 })
 
